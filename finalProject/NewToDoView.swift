@@ -10,6 +10,8 @@ struct NewToDoView_Previews: PreviewProvider {
     static var previews: some View {
         NewToDoView(title: "", isImportant: false)
     }
+    @Binding var toDoItems: [ToDoItem]
+    @Binding var showNewTask : Bool
 }
 struct NewToDoView: View {
     @State var title: String
@@ -22,24 +24,34 @@ struct NewToDoView: View {
                 Text("Task Title:")
                 TextField("Enter the task description...", text: $title)
                     .padding()
-                        .background(Color(.systemGroupedBackground))
-                        .cornerRadius(15)
-                          .padding()
+                    .background(Color(.systemGroupedBackground))
+                    .cornerRadius(15)
+                    .padding()
                 Toggle(isOn: $isImportant) {
-                                Text("Is it important?")
-                            }
+                    Text("Is it important?")
+                }
                 .padding()
-                     
+                
                 Button(action: {
-                  
+                    self.addTask(title: self.title, isImportant: self.isImportant)
+                    self.showNewTask = false
                 }) {
                     Text("Add")
-                        .padding()
+                }
                     
+                }
             }
         }
     }
-}
+    static var previews: some View {
+            NewToDoView(title: "", isImportant: false, toDoItems: .constant([]))
+    }
+    private func addTask(title: String, isImportant: Bool = false) {
+            let task = ToDoItem(title: title, isImportant: isImportant)
+            toDoItems.append(task)
+    showNewTask: .constant(true)
+    }
+
 
 #Preview {
     NewToDoView()

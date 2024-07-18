@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct toDoList: View {
+    @State var toDoItems: [ToDoItem] = []
+    @State private var showNewTask = false
     var body: some View {
         ZStack{
             Color.init(red: 252/255, green: 222/255, blue: 228/255)
@@ -18,7 +20,8 @@ struct toDoList: View {
                      .fontWeight(.black)
                 Spacer()
                 Button(action :  {
-                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/ /*@END_MENU_TOKEN@*/
+                    self.showNewTask = true
+
                 }) {
                     Text("+")
                 }
@@ -26,6 +29,18 @@ struct toDoList: View {
                     
                 }
                 .padding()
+            }
+            List {
+                ForEach (toDoItems) { toDoItem in
+                    if toDoItem.isImportant == true {
+                        Text("‼️" + toDoItem.title)
+                    } else {
+                        Text(toDoItem.title)
+                    }
+                        }
+            }
+            if showNewTask {
+                NewToDoView(title: "", isImportant: false, toDoItems: $toDoItems, showNewTask: $showNewTask)
             }
         }
     }

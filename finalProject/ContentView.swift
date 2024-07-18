@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
+        NavigationStack {
         ZStack{
             Color.init(red: 252/255, green: 222/255, blue: 228/255)
                 .edgesIgnoringSafeArea(.all)
@@ -16,6 +17,11 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .foregroundColor(Color(hue: 1.0, saturation: 0.322, brightness: 0.729))
                 .multilineTextAlignment(.center)
+                NavigationLink(destination: toDoList()) {
+                    Text("Click here to go to the to do list")
+                }
+
+        }
         }
     }
 }
