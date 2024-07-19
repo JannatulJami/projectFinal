@@ -7,6 +7,7 @@
 
 import SwiftUI
 struct NewToDoView_Previews: PreviewProvider {
+    @Environment(\.managedObjectContext) var context
     static var previews: some View {
         NewToDoView(title: "", isImportant: false)
     }
@@ -16,6 +17,7 @@ struct NewToDoView_Previews: PreviewProvider {
 struct NewToDoView: View {
     @State var title: String
     @State var isImportant: Bool
+    let persistenceController = PersistenceController.shared
     var body: some View {
         ZStack{
             Color.init(red: 252/255, green: 222/255, blue: 228/255)
@@ -44,12 +46,19 @@ struct NewToDoView: View {
         }
     }
     static var previews: some View {
-            NewToDoView(title: "", isImportant: false, toDoItems: .constant([]))
+            NewToDoView(title: "", isImportant: false)
     }
     private func addTask(title: String, isImportant: Bool = false) {
-            let task = ToDoItem(title: title, isImportant: isImportant)
-            toDoItems.append(task)
-    showNewTask: .constant(true)
+        let task = ToDo(context: context)
+        task.id = UUID()
+        task.title = title
+        task.isImportant = isImportant
+                
+        do {
+                    try context.save()
+        } catch {
+            print(error)
+        }
     }
 
 

@@ -12,6 +12,8 @@
 		BD39F1B22C49B02200A387C2 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD39F1B12C49B02200A387C2 /* ToDoItem.swift */; };
 		BD39F1B42C49B05400A387C2 /* toDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD39F1B32C49B05400A387C2 /* toDoList.swift */; };
 		BD39F1B62C49B1A600A387C2 /* NewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD39F1B52C49B1A600A387C2 /* NewToDoView.swift */; };
+		BD39F1B82C49CD2000A387C2 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD39F1B72C49CD2000A387C2 /* Persistence.swift */; };
+		BD39F1BB2C49F98A00A387C2 /* finalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD39F1B92C49F98A00A387C2 /* finalProject.xcdatamodeld */; };
 		BDB6F65F2C483A4A00656C86 /* homePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB6F65E2C483A4A00656C86 /* homePage.swift */; };
 		BDDF6FE92C47099000B6AF7A /* finalProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF6FE82C47099000B6AF7A /* finalProjectApp.swift */; };
 		BDDF6FEB2C47099000B6AF7A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDF6FEA2C47099000B6AF7A /* ContentView.swift */; };
@@ -45,6 +47,8 @@
 		BD39F1B12C49B02200A387C2 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		BD39F1B32C49B05400A387C2 /* toDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDoList.swift; sourceTree = "<group>"; };
 		BD39F1B52C49B1A600A387C2 /* NewToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoView.swift; sourceTree = "<group>"; };
+		BD39F1B72C49CD2000A387C2 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		BD39F1BA2C49F98A00A387C2 /* finalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = finalProject.xcdatamodel; sourceTree = "<group>"; };
 		BDB6F65E2C483A4A00656C86 /* homePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePage.swift; sourceTree = "<group>"; usesTabs = 0; };
 		BDDF6FE52C47099000B6AF7A /* finalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = finalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDF6FE82C47099000B6AF7A /* finalProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = finalProjectApp.swift; sourceTree = "<group>"; };
@@ -110,7 +114,9 @@
 				BDDF6FEA2C47099000B6AF7A /* ContentView.swift */,
 				BD39F1B12C49B02200A387C2 /* ToDoItem.swift */,
 				BD39F1B32C49B05400A387C2 /* toDoList.swift */,
+				BD39F1B72C49CD2000A387C2 /* Persistence.swift */,
 				BD39F1B52C49B1A600A387C2 /* NewToDoView.swift */,
+				BD39F1B92C49F98A00A387C2 /* finalProject.xcdatamodeld */,
 				BD0090C22C485D4200B14BD6 /* calendarPage.swift */,
 				BDB6F65E2C483A4A00656C86 /* homePage.swift */,
 				BD0090C02C485A4600B14BD6 /* reminder.swift */,
@@ -275,7 +281,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD39F1B82C49CD2000A387C2 /* Persistence.swift in Sources */,
 				BD0090C32C485D4200B14BD6 /* calendarPage.swift in Sources */,
+				BD39F1BB2C49F98A00A387C2 /* finalProject.xcdatamodeld in Sources */,
 				BDB6F65F2C483A4A00656C86 /* homePage.swift in Sources */,
 				BD39F1B42C49B05400A387C2 /* toDoList.swift in Sources */,
 				BD39F1B22C49B02200A387C2 /* ToDoItem.swift in Sources */,
@@ -606,6 +614,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BD39F1B92C49F98A00A387C2 /* finalProject.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD39F1BA2C49F98A00A387C2 /* finalProject.xcdatamodel */,
+			);
+			currentVersion = BD39F1BA2C49F98A00A387C2 /* finalProject.xcdatamodel */;
+			name = finalProject.xcdatamodeld;
+			path = /Users/scholar/Desktop/finalProject/finalProject/finalProject.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BDDF6FDD2C47099000B6AF7A /* Project object */;
 }
