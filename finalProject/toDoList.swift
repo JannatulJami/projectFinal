@@ -9,12 +9,12 @@ import SwiftUI
 
 struct toDoList: View {
     @Environment(\.managedObjectContext) var context
+    @State private var showNewTask = false
     @FetchRequest(
         entity: ToDo.entity(), sortDescriptors: [ NSSortDescriptor(keyPath: \ToDo.id, ascending: false) ])
     
     var toDoItems: FetchedResults<ToDo>
-    @State private var showNewTask = false
-    let persistenceController = PersistenceController.shared
+   //let persistenceController = PersistenceController.shared
     var body: some View {
         ZStack{
             Color.init(red: 252/255, green: 222/255, blue: 228/255)
@@ -25,16 +25,30 @@ struct toDoList: View {
                         .font(.system(size: 40))
                         .fontWeight(.black)
                     Spacer()
-                    Button(action :  {
+                    
+                    Button(action:  {
                         self.showNewTask = true
                         
                     }) {
                         Text("+")
                     }
+                 /*   Button {
+                            withAnimation {
+                                    
+                                self.showNewTask = true
+                                        }
+                                        
+                                    } label: {
+                                        Text("+")
+                                            .font(.title)
+                                            .bold()
+                                    }
+                   // Spacer() */
                 }
                 .padding()
                 Spacer()
-            
+            }
+          //  .padding()
             List {
                 ForEach (toDoItems) { toDoItem in
                     if toDoItem.isImportant == true {
@@ -43,15 +57,14 @@ struct toDoList: View {
                         Text(toDoItem.title ?? "No title")
                     }
                 }
-                onDelete(perform: deleteTask)
+                .onDelete(perform: deleteTask)
             }
-            if showNewTask {
-                NewToDoView(title: "", isImportant: false, showNewTask: $showNewTask)
-            }
+            .listStyle(.plain)
+        }
+        if showNewTask {
+            NewToDoView(title: "", isImportant: false, showNewTask: $showNewTask)
         }
     }
-    }
-}
     private func deleteTask(offsets: IndexSet) {
         withAnimation {
             offsets.map { toDoItems[$0] }.forEach(context.delete)
@@ -63,10 +76,11 @@ struct toDoList: View {
             }
         }
     }
+}
 
-
-
-
-#Preview {
-    toDoList().environment(\.managedObjectContext, persistenceController.container.viewContext)
+struct toDoList_Previews: PreviewProvider {
+    static var previews: some View {
+ //       toDoList()
+        toDoList() .environment(\.managedObjectContext, PersistenceController.shared.container.viewContext)
+    }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct calendarPage: View {
         @State var selectedDate: Date = Date()
+    let persistenceController = PersistenceController.shared
         var body: some View {
             ZStack {
                 Color.init(red: 252/255, green: 222/255, blue: 228/255)
