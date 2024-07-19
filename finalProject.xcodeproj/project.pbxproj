@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD0090C12C485A4600B14BD6 /* reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0090C02C485A4600B14BD6 /* reminder.swift */; };
 		BD0090C32C485D4200B14BD6 /* calendarPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0090C22C485D4200B14BD6 /* calendarPage.swift */; };
 		BD2AA0152C4AD63B00AA3B23 /* homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2AA0142C4AD63B00AA3B23 /* homepage.swift */; };
 		BD39F1B22C49B02200A387C2 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD39F1B12C49B02200A387C2 /* ToDoItem.swift */; };
@@ -42,7 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		BD0090C02C485A4600B14BD6 /* reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reminder.swift; sourceTree = "<group>"; };
 		BD0090C22C485D4200B14BD6 /* calendarPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarPage.swift; sourceTree = "<group>"; };
 		BD2AA0142C4AD63B00AA3B23 /* homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepage.swift; sourceTree = "<group>"; };
 		BD39F1B12C49B02200A387C2 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				BD39F1B52C49B1A600A387C2 /* NewToDoView.swift */,
 				BD39F1B92C49F98A00A387C2 /* finalProject.xcdatamodeld */,
 				BD0090C22C485D4200B14BD6 /* calendarPage.swift */,
-				BD0090C02C485A4600B14BD6 /* reminder.swift */,
 				BDDF6FEC2C47099E00B6AF7A /* Assets.xcassets */,
 				BDDF6FEE2C47099E00B6AF7A /* Preview Content */,
 			);
@@ -289,7 +286,6 @@
 				BD39F1B22C49B02200A387C2 /* ToDoItem.swift in Sources */,
 				BDDF6FEB2C47099000B6AF7A /* ContentView.swift in Sources */,
 				BDDF6FE92C47099000B6AF7A /* finalProjectApp.swift in Sources */,
-				BD0090C12C485A4600B14BD6 /* reminder.swift in Sources */,
 				BD39F1B62C49B1A600A387C2 /* NewToDoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

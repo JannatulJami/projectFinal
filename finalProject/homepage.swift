@@ -29,7 +29,7 @@ struct homepage: View {
           .padding(4.0)
         Text("Nice to meet you I am your personal assitant.")
           .font(.callout)
-          .fontWeight(.light)
+          .fontWeight(.black)
           .foregroundColor(Color(hue: 0.898, saturation: 0.976, brightness: 0.435))
           .multilineTextAlignment(.center)
           .padding(4.0)

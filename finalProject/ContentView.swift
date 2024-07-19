@@ -21,7 +21,16 @@ struct ContentView: View {
             .foregroundColor(Color(hue: 1.0, saturation: 0.322, brightness: 0.729))
             .multilineTextAlignment(.center)
             .lineLimit(0)
-            .padding(65)
+            .padding(10)
+            Text("By Jannatul Jami, Nissie Cadette")
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+                .foregroundColor(Color(hue: 1.0, saturation: 0.322, brightness: 0.729))
+            Text("Tasnia Khandaker, Sonakshi Sareen")
+                .fontWeight(.bold)
+                .multilineTextAlignment(.center)
+                .padding(30)
+                .foregroundColor(Color(hue: 1.0, saturation: 0.322, brightness: 0.729))
           Text("Hello! ")
             .font(.callout)
             .fontWeight(.semibold)
@@ -58,23 +67,29 @@ struct ContentView: View {
                   .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
                 // specify desired width and height .aspectRatio(contentMode: .fit) // optional, to maintain aspect ratio }
               }
+            
            // }) {
               // Image("Calender")
               // .resizable()
               // .frame(width: 80, height: 80) // specify desired width and height .aspectRatio(contentMode: .fit) // optional, to maintain aspect ratio
               // .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
-          /*  NavigationLink(destination: NotesView()) {
-              Image("to do list")
+            /*  NavigationLink(destination: NewToDoView()) { Image("reminders")
                 .resizable()
                 .frame(width: 80, height: 80) // specify desired width and height .aspectRatio(contentMode: .fit) // optional, to maintain aspect ratio
                 .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
             } */
             NavigationLink(destination: toDoList()) {
-              Image("reminders")
+              Image("to do list")
                 .resizable()
                 .frame(width: 80, height: 80) // specify desired width and height .aspectRatio(contentMode: .fit) // optional, to maintain aspect ratio
                 .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
             }
+         /*     NavigationLink(destination: NewToDoView()) {
+                  Image("reminders")
+                      .resizable()
+                      .frame(width: 80, height: 80) // specify desired width and height .aspectRatio(contentMode: .fit) // optional, to maintain aspect ratio
+                      .cornerRadius(/*@START_MENU_TOKEN@*/12.0/*@END_MENU_TOKEN@*/)
+              } */
          /*   NavigationLink(destination: JournalView()) {
               Image("journal")
                 .resizable()

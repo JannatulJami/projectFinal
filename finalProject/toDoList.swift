@@ -22,8 +22,10 @@ struct toDoList: View {
             VStack{
                 HStack{
                     Text("To Do List")
+                        
                         .font(.system(size: 40))
                         .fontWeight(.black)
+                        .foregroundColor(Color(hue: 1.0, saturation: 0.315, brightness: 0.79))
                     Spacer()
                     
                     Button(action:  {
